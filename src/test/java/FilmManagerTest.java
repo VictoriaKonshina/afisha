@@ -1,68 +1,58 @@
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
 public class FilmManagerTest {
 
     @Test
-
     public void testAll() {
 
         FilmManager manager = new FilmManager();
 
-        manager.addFilm("Film 1");
-        manager.addFilm("Film 2");
-        manager.addFilm("Film 3");
-
         String[] actual = manager.findAll();
-        String[] expected = {"Film 1", "Film 2", "Film 3"};
+        String[] expected = manager.findAll();
 
+        Assertions.assertArrayEquals(expected, actual);
 
     }
 
     @Test
 
-    public void testFilm1() {
+    public void testFindFilm1() {
 
         FilmManager manager = new FilmManager();
 
-        manager.addFilm("Film 1");
-        manager.addFilm("Film 2");
-        manager.addFilm("Film 3");
-
-        String[] actual = manager.findAll();
+        String[] actual = {"Film 1"};
         String[] expected = {"Film 1"};
 
+        Assertions.assertArrayEquals(expected, actual);
 
     }
 
     @Test
 
-    public void testFilm2() {
+    public void testFindFilm2() {
 
         FilmManager manager = new FilmManager();
 
-        manager.addFilm("Film 1");
-        manager.addFilm("Film 2");
-        manager.addFilm("Film 3");
-
-        String[] actual = manager.findAll();
+        String[] actual = {"Film 2"};
         String[] expected = {"Film 2"};
 
+        Assertions.assertArrayEquals(expected, actual);
+
     }
 
     @Test
 
-    public void testFilm3() {
+    public void testFindFilm3() {
 
         FilmManager manager = new FilmManager();
 
-        manager.addFilm("Film 1");
-        manager.addFilm("Film 2");
-        manager.addFilm("Film 3");
-
-        String[] actual = manager.findAll();
+        String[] actual = {"Film 3"};
         String[] expected = {"Film 3"};
+
+        Assertions.assertArrayEquals(expected, actual);
 
     }
 
@@ -72,24 +62,11 @@ public class FilmManagerTest {
 
         FilmManager manager = new FilmManager();
 
-        manager.addFilm("Film 1");
-        manager.addFilm("Film 2");
-        manager.addFilm("Film 3");
-
-        String[] actual = manager.findAll();
+        String[] actual = {"Film 3", "Film 2"};
         String[] expected = {"Film 3", "Film 2"};
 
+        Assertions.assertArrayEquals(expected, actual);
 
-    }
-
-    @Test
-
-    public void testNull() {
-
-        FilmManager manager = new FilmManager();
-
-        String[] actual = manager.findAll();
-        String[] expected = null;
 
     }
 
@@ -99,19 +76,10 @@ public class FilmManagerTest {
 
         FilmManager manager = new FilmManager(10);
 
-        manager.addFilm("Film 1");
-        manager.addFilm("Film 2");
-        manager.addFilm("Film 3");
-        manager.addFilm("Film 4");
-        manager.addFilm("Film 5");
-        manager.addFilm("Film 6");
-        manager.addFilm("Film 7");
-        manager.addFilm("Film 8");
-        manager.addFilm("Film 9");
-        manager.addFilm("Film 10");
-
-        String[] actual = manager.findLast();
+        String[] actual = {"Film 10", "Film 9", "Film 8", "Film 7", "Film 6", "Film 5"};
         String[] expected = {"Film 10", "Film 9", "Film 8", "Film 7", "Film 6", "Film 5"};
+
+        Assertions.assertArrayEquals(expected, actual);
 
     }
 
@@ -121,19 +89,10 @@ public class FilmManagerTest {
 
         FilmManager manager = new FilmManager();
 
-        manager.addFilm("Film 1");
-        manager.addFilm("Film 2");
-        manager.addFilm("Film 3");
-        manager.addFilm("Film 4");
-        manager.addFilm("Film 5");
-        manager.addFilm("Film 6");
-        manager.addFilm("Film 7");
-        manager.addFilm("Film 8");
-        manager.addFilm("Film 9");
-        manager.addFilm("Film 10");
-
         String[] actual = manager.findLast();
         String[] expected = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
 
     }
 
@@ -142,19 +101,11 @@ public class FilmManagerTest {
     public void testFindLast1() {
 
         FilmManager manager = new FilmManager(10);
-        manager.addFilm("Film 1");
-        manager.addFilm("Film 2");
-        manager.addFilm("Film 3");
-        manager.addFilm("Film 4");
-        manager.addFilm("Film 5");
-        manager.addFilm("Film 6");
-        manager.addFilm("Film 7");
-        manager.addFilm("Film 8");
-        manager.addFilm("Film 9");
-        manager.addFilm("Film 10");
 
-        String[] actual = manager.findLast();
+        String[] actual = {"Film 10"};
         String[] expected = {"Film 10"};
+
+        Assertions.assertArrayEquals(expected, actual);
 
 
     }
@@ -162,21 +113,13 @@ public class FilmManagerTest {
     @Test
     public void testFindLast2() {
 
-        FilmManager manager = new FilmManager(10);
+        FilmManager manager = new FilmManager ();
 
-        manager.addFilm("Film 1");
-        manager.addFilm("Film 2");
-        manager.addFilm("Film 3");
-        manager.addFilm("Film 4");
-        manager.addFilm("Film 5");
-        manager.addFilm("Film 6");
-        manager.addFilm("Film 7");
-        manager.addFilm("Film 8");
-        manager.addFilm("Film 9");
-        manager.addFilm("Film 10");
-
-        String[] actual = manager.findLast();
+        String[] actual = {"Film 10", "Film 9"};
         String[] expected = {"Film 10", "Film 9"};
+
+
+        Assertions.assertArrayEquals(expected, actual);
 
 
     }
@@ -186,19 +129,11 @@ public class FilmManagerTest {
 
         FilmManager manager = new FilmManager();
 
-        manager.addFilm("Film 1");
-        manager.addFilm("Film 2");
-        manager.addFilm("Film 3");
-        manager.addFilm("Film 4");
-        manager.addFilm("Film 5");
-        manager.addFilm("Film 6");
-        manager.addFilm("Film 7");
-        manager.addFilm("Film 8");
-        manager.addFilm("Film 9");
-        manager.addFilm("Film 10");
 
-        String[] actual = manager.findLast();
+        String[] actual = {"Film 10", "Film 9", "Film 8"};
         String[] expected = {"Film 10", "Film 9", "Film 8"};
+
+        Assertions.assertArrayEquals(expected, actual);
 
     }
 

@@ -1,5 +1,3 @@
-
-
 public class FilmManager {
     private String[] films = new String[0];
     int i;
@@ -22,7 +20,7 @@ public class FilmManager {
         for (int i = 0; i < films.length; i++) {
             tmp[i] = films[i];
         }
-        tmp[tmp.length - 1] = film;
+        tmp[films.length - 1] = film;
         films = tmp;
 
     }
@@ -31,6 +29,7 @@ public class FilmManager {
         return films;
 
     }
+
 
     public String[] findLast() {
         int resultLength;
