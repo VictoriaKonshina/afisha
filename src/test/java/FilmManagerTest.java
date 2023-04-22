@@ -62,8 +62,8 @@ public class FilmManagerTest {
 
         FilmManager manager = new FilmManager();
 
-        String[] actual = {"Film 3", "Film 2"};
-        String[] expected = {"Film 3", "Film 2"};
+        String[] actual = {"Film 5", "Film 6"};
+        String[] expected = {"Film 5", "Film 6"};
 
         Assertions.assertArrayEquals(expected, actual);
 
@@ -72,9 +72,48 @@ public class FilmManagerTest {
 
     @Test
 
+    public void testFindFilms10() {
+
+        FilmManager manager = new FilmManager();
+
+        String[] actual = {"Film 10"};
+        String[] expected = {"Film 10"};
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+
+    public void testFindFilms9() {
+
+        FilmManager manager = new FilmManager();
+
+        String[] actual = {"Film 9"};
+        String[] expected = {"Film 9"};
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+
+    public void testFindFilms8() {
+
+        FilmManager manager = new FilmManager();
+
+        String[] actual = {"Film 8"};
+        String[] expected = {"Film 8"};
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+
     public void testFindLast5() {
 
-        FilmManager manager = new FilmManager(10);
+        FilmManager manager = new FilmManager();
 
         String[] actual = {"Film 10", "Film 9", "Film 8", "Film 7", "Film 6", "Film 5"};
         String[] expected = {"Film 10", "Film 9", "Film 8", "Film 7", "Film 6", "Film 5"};
@@ -100,7 +139,7 @@ public class FilmManagerTest {
 
     public void testFindLast1() {
 
-        FilmManager manager = new FilmManager(10);
+        FilmManager manager = new FilmManager();
 
         String[] actual = {"Film 10"};
         String[] expected = {"Film 10"};
@@ -132,6 +171,19 @@ public class FilmManagerTest {
 
         String[] actual = {"Film 10", "Film 9", "Film 8"};
         String[] expected = {"Film 10", "Film 9", "Film 8"};
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testFindLast4() {
+
+        FilmManager manager = new FilmManager();
+
+
+        String[] actual = {"Film 10", "Film 9", "Film 8", "Film 7"};
+        String[] expected = {"Film 10", "Film 9", "Film 8", "Film 7"};
 
         Assertions.assertArrayEquals(expected, actual);
 
