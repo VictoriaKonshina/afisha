@@ -113,7 +113,7 @@ public class FilmManagerTest {
     @Test
     public void testFindLast2() {
 
-        FilmManager manager = new FilmManager ();
+        FilmManager manager = new FilmManager();
 
         String[] actual = {"Film 10", "Film 9"};
         String[] expected = {"Film 10", "Film 9"};
