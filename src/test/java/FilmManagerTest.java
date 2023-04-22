@@ -113,7 +113,7 @@ public class FilmManagerTest {
 
     public void testFindLast5() {
 
-        FilmManager manager = new FilmManager();
+        FilmManager manager = new FilmManager(5);
 
         String[] actual = {"Film 10", "Film 9", "Film 8", "Film 7", "Film 6", "Film 5"};
         String[] expected = {"Film 10", "Film 9", "Film 8", "Film 7", "Film 6", "Film 5"};
@@ -179,11 +179,24 @@ public class FilmManagerTest {
     @Test
     public void testFindLast4() {
 
-        FilmManager manager = new FilmManager();
+        FilmManager manager = new FilmManager(4);
 
 
         String[] actual = {"Film 10", "Film 9", "Film 8", "Film 7"};
         String[] expected = {"Film 10", "Film 9", "Film 8", "Film 7"};
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testFindLast10() {
+
+        FilmManager manager = new FilmManager(1);
+
+
+        String[] actual = {"Film 10"};
+        String[] expected = {"Film 10"};
 
         Assertions.assertArrayEquals(expected, actual);
 
