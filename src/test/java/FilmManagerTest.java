@@ -186,7 +186,7 @@ public class FilmManagerTest {
         String[] expected = {"Film 10", "Film 9", "Film 8", "Film 7"};
 
         Assertions.assertArrayEquals(expected, actual);
-        
+
 
     }
 
