@@ -186,19 +186,7 @@ public class FilmManagerTest {
         String[] expected = {"Film 10", "Film 9", "Film 8", "Film 7"};
 
         Assertions.assertArrayEquals(expected, actual);
-
-    }
-
-    @Test
-    public void testFindLast10() {
-
-        FilmManager manager = new FilmManager(1);
-
-
-        String[] actual = {"Film 10"};
-        String[] expected = {"Film 10"};
-
-        Assertions.assertArrayEquals(expected, actual);
+        
 
     }
 
