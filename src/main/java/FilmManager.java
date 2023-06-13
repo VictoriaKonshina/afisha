@@ -1,6 +1,5 @@
 public class FilmManager {
     private String[] films = new String[0];
-    int i;
     private int limit;
 
     public FilmManager() {
